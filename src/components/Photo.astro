@@ -1,0 +1,8 @@
+---
+import type { Photo } from '../data/home';
+interface Props { photo: Photo; variant?: string; eager?: boolean; }
+const { photo, variant = '', eager = false } = Astro.props;
+---
+<div class:list={['photo', variant, { 'is-placeholder': !photo.src }]}>
+  {photo.src ? <img src={photo.src} alt={photo.alt} loading={eager ? 'eager' : 'lazy'} /> : <div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span>{photo.placeholder}</span><small>Photo to come</small></div>}
+</div>

@@ -1,0 +1,20 @@
+// Original PGN supplied by Andy; unknown event, site, and date are preserved.
+export const featuredGame = {
+  initialPly: 51, // Final position after 26. Qf7; visitors can replay from the start.
+  pgn: `[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "9"]
+[White "Hong, Zihan"]
+[Black "Mayorga Araya, Sofia"]
+[Result "1-0"]
+[WhiteElo "1859"]
+[BlackElo "2111"]
+[Link "https://www.chess.com/analysis/collection/pan-american-school-2026-2XQ8dauWe/26khWWA2aS/analysis?move=50"]
+
+1. d4 d5 2. Bf4 c5 3. Nc3 Nc6 4. e4 cxd4 5. Nb5 e5 $1 6. exd5 exf4 7. dxc6 bxc6 $2
+8. Qxd4 $3 cxb5 $2 9. Bxb5+ Bd7 $2 10. Qe4+ $1 Be7 11. Bxd7+ Kxd7 $6 12. O-O-O+ Bd6 13.
+Qb7+ Ke6 14. Nf3 Ne7 15. Ng5+ Kf5 16. Nxf7 Qb6 17. Qd7+ Kf6 18. Rxd6+ Kxf7 19.
+Qe6+ Kf8 20. Rxb6 axb6 21. Re1 Re8 22. Qxb6 h5 23. Re4 Rh6 24. Rxf4+ Kg8 25.
+Qb3+ Kh8 $2 26. Qf7 1-0`,
+};

@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { music } from '../data/music';
+import Photo from '../components/Photo.astro';
+import '../styles/music.css';
+---
+<SiteLayout title="Music — Andy" active="music" mainClass="area-page creative-page">
+  <section class="section listening-section" aria-labelledby="music-title">
+    <p class="eyebrow">In my headphones</p>
+    <h1 id="music-title">Music I listen to</h1>
+    <p>{music.intro}</p><p>{music.moods}</p>
+    <h2 class="rotation-title">On repeat</h2>
+    <div class="rotation-grid">{music.rotation.map(group => <div class="rotation-group">
+      <h3>{group.artist}</h3><p>{group.note}</p>
+      <span class="small-label">{group.label}</span>
+      <ul>{group.selections.map(selection => <li>{selection}</li>)}</ul>
+    </div>)}</div>
+  </section>
+  <section class="section piano-section" aria-labelledby="piano-title">
+    <figure><Photo photo={music.piano.photo} variant="music-photo" /></figure>
+    <div><p class="eyebrow">At the keys</p><h2 id="piano-title">Piano</h2><p>{music.piano.reflection}</p><p>{music.piano.background}</p></div>
+  </section>
+  <section class="section saxophone-section" aria-labelledby="saxophone-title">
+    <div><p class="eyebrow">From my school band days</p><h2 id="saxophone-title">Tenor saxophone</h2><p>{music.saxophone.copy}</p></div>
+    <Photo photo={music.saxophone.photo} variant="band-photo" />
+  </section>
+  <section class="section art-section" aria-labelledby="art-title">
+    <p class="eyebrow">Room for something else</p><h2 id="art-title">Art</h2><p>{music.art.copy}</p>
+    <div class="art-gallery">{music.art.images.map(image => <Photo photo={image} variant="art-image" />)}</div>
+  </section>
+</SiteLayout>

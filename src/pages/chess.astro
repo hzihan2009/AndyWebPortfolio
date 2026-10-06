@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { home } from '../data/home';
+import ChessGame from '../components/ChessGame.astro';
+---
+<SiteLayout title="Chess — Andy" active="chess" mainClass="area-page">
+      <section id="chess" class="section chess-section" aria-labelledby="chess-title">
+        <div><p class="eyebrow">On the board</p><h1 id="chess-title">A game I keep<br class="desktop-break" /> coming back to</h1><p>{home.chess.copy}</p><div class="chess-note"><span class="small-label">A couple of tournament highlights</span><ul>{home.chess.highlights.map(highlight => <li>{highlight}</li>)}</ul></div></div>
+        <ChessGame />
+      </section>
+  {home.chess.stories.length > 0 && <section class="section" aria-labelledby="stories-title">
+    <h2 id="stories-title">A few chess stories</h2>
+    {home.chess.stories.map(story => <article class="chess-story"><h3>{story.title}</h3><p>{story.text}</p></article>)}
+  </section>}
+</SiteLayout>
