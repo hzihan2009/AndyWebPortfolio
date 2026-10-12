@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A little corner of the internet for Andy's chess, music, and things he builds."
+    />
+    <title>Things I build — Andy</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/build.css" />
+    <script defer src="data/build-content.js"></script>
+    <script defer src="js/build.js"></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="container header">
+      <a class="wordmark" href="index.html" aria-label="Andy, homepage"
+        >Andy<span aria-hidden="true">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="chess.html">Chess</a><a href="music.html">Music</a
+        ><a href="build.html" aria-current="page">Things I build</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main" class="container area-page">
+      <section id="build" class="section build-section" aria-labelledby="build-title">
+        <p class="eyebrow">From an idea to something useful</p>
+        <h1 id="build-title">Things I build</h1>
+        <p class="build-intro" data-copy="intro">Some things I've built started with a problem I kept running into.</p>
+        <p class="build-context" data-copy="context">A lot of my technical work comes from communities I'm already part of, especially Mississauga Chess Club, where I've volunteered for around three years.</p>
+      </section>
+      <article class="build-story" aria-labelledby="member-title">
+        <div class="project-heading"><span class="project-number">01</span><h2 id="member-title">MCC Member App</h2></div>
+        <div class="project-narrative">
+          <div><h3>The problem</h3><p data-copy="member.problem">Tournament registration and check-in used to rely heavily on manual work. On busy nights, things could get crowded and disorganized. Through volunteering, I saw that friction directly and wanted to make the process easier for players.</p></div>
+          <div><h3>What I built</h3><p data-copy="member.built">I built the MCC Member App so members can handle parts of registration and check-in before arriving, rather than doing everything at the club.</p></div>
+        </div>
+        <div class="project-shots">
+          <figure data-screenshot="member.screenshots.0"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Login screen</span><small>Screenshot to come</small></div></div><figcaption>Login screen</figcaption></figure>
+          <figure data-screenshot="member.screenshots.1"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Registration screen</span><small>Screenshot to come</small></div></div><figcaption>Registration screen</figcaption></figure>
+          <figure data-screenshot="member.screenshots.2"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Check-in screen</span><small>Screenshot to come</small></div></div><figcaption>Check-in screen</figcaption></figure>
+          <figure data-screenshot="member.screenshots.3"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Member information / stats screen</span><small>Screenshot to come</small></div></div><figcaption>Member information / stats screen</figcaption></figure>
+        </div>
+        <div class="project-narrative project-reflection">
+          <div><h3>What members can do</h3><ul data-features="member.features"><li>Log in with their own account.</li><li>Register for the tournament or event they plan to compete in.</li><li>Check in online before arriving.</li><li>Access their club and member information.</li></ul></div>
+          <div><h3>Connected to the organizers</h3><p data-copy="member.connection">The app connects to the tournament administration system, so organizers can see who has registered and checked in.</p><h3 style="margin-top: 24px">What I learned</h3><p data-copy="member.learning">More about what I learned here soon.</p></div>
+        </div>
+      </article>
+      <aside class="system-connection" aria-label="How the two MCC projects connect">
+        <h3>Member app</h3><p>Players register and check in</p>
+        <span class="system-connector" aria-hidden="true">↓ connected system ↓</span>
+        <h3>Admin system</h3><p>Organizers manage the tournament</p>
+      </aside>
+      <article class="build-story" aria-labelledby="admin-title">
+        <div class="project-heading"><span class="project-number">02</span><h2 id="admin-title">MCC Tournament Administration System</h2></div>
+        <p data-copy="admin.intro">The organizer-facing half of the same system. While members register and check in through the app, tournament organizers use this side to manage the tournament.</p>
+        <div class="project-shots wide-shots">
+          <figure data-screenshot="admin.screenshots.0"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Tournament participation and check-in</span><small>Screenshot to come</small></div></div><figcaption>Tournament participation and check-in</figcaption></figure>
+          <figure data-screenshot="admin.screenshots.1"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Player tracking and name-card management</span><small>Screenshot to come</small></div></div><figcaption>Player tracking and name-card management</figcaption></figure>
+        </div>
+        <div class="project-narrative project-reflection">
+          <div><h3>Running the tournament</h3><p data-copy="admin.operations">Organizers can see which members are participating, manage registration and check-in status, and keep player information up to date. They can also manage or remove members when needed and track tournament participation.</p></div>
+          <div><h3>Keeping things connected</h3><p data-copy="admin.workflows">The system supports pairing-related workflows, player tracking, and name-card management. Its connection to the member app gives organizers better visibility into who has registered or checked in.</p></div>
+        </div>
+        <div class="project-reflection"><h3>Why it matters</h3><p data-copy="admin.impact">The goal is less friction on tournament nights: members can handle parts of the process before arriving, and organizers have a clearer view of who's participating.</p></div>
+      </article>
+      <article class="build-solve" aria-labelledby="solve-title">
+        <h2 id="solve-title">SolveXchange</h2><span class="small-label">Chief of IT Operations</span>
+        <p data-copy="solve.intro">Alongside MCC, I also help keep SolveXchange's technical side running.</p>
+        <p data-copy="solve.responsibilities">As Chief of IT Operations, I manage and maintain the website, make technical updates and improvements, and support the organization's technical needs. I'm also working with a partner on an app that's still in development.</p>
+        <div class="project-shots wide-shots">
+          <figure data-screenshot="solve.screenshots.0"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">SolveXchange website</span><small>Screenshot to come</small></div></div><figcaption>SolveXchange website</figcaption></figure>
+          <figure data-screenshot="solve.screenshots.1"><div class="photo is-placeholder"><div class="photo-empty"><span class="placeholder-mark" aria-hidden="true">+</span><span class="screenshot-label">Future app screenshot · in development</span><small>Screenshot to come</small></div></div><figcaption>Future app screenshot · in development</figcaption></figure>
+        </div>
+        <a data-live-link hidden>Visit SolveXchange ↗</a>
+      </article>
+      <p class="build-closing" data-copy="closing">I like projects where the software has a clear reason to exist—usually because I've seen the problem myself.</p>
+    </main>
+    <footer>
+      <div class="container">
+        <section
+          id="contact"
+          class="contact section"
+          aria-labelledby="contact-title"
+        >
+          <div>
+            <p class="eyebrow">That's me, for now.</p>
+            <h2 id="contact-title">Say hello.</h2>
+            <p>
+              If you want to talk about chess, music, something you're building,
+              or anything interesting, feel free to reach out.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:hzihan2009@gmail.com">hzihan2009@gmail.com</a>
+            <div>
+              <a href="https://github.com/hzihan2009" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/andy-hong-b78608400/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container footer">
+        <a class="wordmark" href="index.html"
+          >Andy<span class="accent">.</span></a
+        ><a href="#top">Back to the top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

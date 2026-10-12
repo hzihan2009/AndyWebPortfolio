@@ -1,8 +1,0 @@
----
-import SiteLayout from '../layouts/SiteLayout.astro';
-import { home } from '../data/home';
-import Photo from '../components/Photo.astro';
----
-<SiteLayout title="Things I build — Andy" active="build" mainClass="area-page">
-      <section id="build" class="section build-section" aria-labelledby="build-title"><p class="eyebrow">From an idea to something useful</p><h1 id="build-title">Things I build</h1><p class="build-intro">Some things I've built started with a problem I kept running into.</p><p class="build-context">These grew out of my involvement and volunteering with Mississauga Chess Club.</p><div class="projects">{home.projects.map((project, i) => <article class="project"><Photo photo={project.image} variant={`project-image ${project.format}`} /><div class="project-heading"><span class="project-number">0{i + 1}</span><h3>{project.title}</h3></div><p>{project.description}</p></article>)}</div><article class="solve"><div><h3>SolveXchange</h3><span class="small-label">Chief of IT Operations</span></div><p>{home.solvexchange}</p></article></section>
-</SiteLayout>

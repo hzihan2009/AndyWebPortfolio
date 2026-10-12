@@ -1,58 +1,54 @@
-# Run and edit Andy's website
+# Running and editing
 
-## Portable runtime (already present in this checkout)
+## Running
 
-Run this in PowerShell from any starting directory:
+Open `index.html` directly in a browser, or use VS Code Live Server. Nothing needs compiling or installing.
+
+With Python installed, run this from PowerShell:
 
 ```powershell
 Set-Location -LiteralPath 'C:\WorkSpace\MyWebPortfolio\AndyWebPortfolio'
-$env:PATH = 'C:\WorkSpace\MyWebPortfolio\AndyWebPortfolio\.runtime;' + $env:PATH
-$env:ASTRO_TELEMETRY_DISABLED = '1'
-& 'C:\WorkSpace\MyWebPortfolio\AndyWebPortfolio\.runtime\node.exe' 'C:\WorkSpace\MyWebPortfolio\AndyWebPortfolio\.runtime\package\bin\npm-cli.js' run dev -- --host 127.0.0.1
+python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Keep the terminal open. Use the URL Astro prints (normally http://127.0.0.1:4321/) and press Ctrl+C to stop. The `.runtime/` folder is ignored by Git, so a fresh clone will need Node.js installed separately.
+Open http://127.0.0.1:8000/. Keep the terminal open and press Ctrl+C to stop. This machine's Python command currently points to an unavailable Windows app alias; direct file opening or Live Server works without Python.
 
-## With Node.js installed normally
+## Content and images
 
-Use Node.js 22.12+ or a newer supported LTS version.
+- `index.html`: hero, Lately values/date, and preview rows.
+- `chess.html`: chess introduction, tournament highlights, player labels, and any future stories.
+- `music.html`: all listening, Piano, Tenor saxophone, and Art content.
+- `build.html`: project layout and readable HTML fallback content.
+- `data/build-content.js`: editable project copy and screenshot configuration (`member`, `admin`, and `solve`). The browser applies these values through `js/build.js`; no server or build step is needed. If supporting visitors with JavaScript disabled after a content change, also update the matching fallback text in `build.html`.
+- `css/build.css`: Build-page-only layout additions; shared site styling stays in `css/styles.css`.
+- Shared navigation and contact/footer markup appears in each HTML file. Edit all four to update shared information.
+- `css/styles.css`: fonts, palette variables, original layout, responsive rules, motion/focus styles, and chess styles. Comments separate major areas.
 
-```sh
-npm install
-npm run dev
+To replace a placeholder, add the image to `images/` and replace the placeholder's `<div class="photo-empty">...</div>` with:
+
+```html
+<img src="images/your-photo.jpg" alt="A meaningful description" loading="lazy">
 ```
 
-Open the address printed by Astro, normally http://localhost:4321.
+Keep the outer `.photo` element and its existing class names. Remove `is-placeholder` from that outer element. Write a caption if appropriate. There is no stock imagery or album artwork. Art placeholders deliberately say "More here soon."
 
-```sh
-npm run build
-npm run preview
-```
+Contact values are currently placeholders. Replace them with normal links such as `<a href="mailto:your-address">your-address</a>` and full HTTPS profile URLs.
 
-The build creates static files in `dist/`. Fonts are bundled locally.
+## Chess viewer
 
-## Editing
+`js/chess.js` uses only browser JavaScript. It reads the recorded positions in `data/chess-game.js`, expands each position's FEN piece placement, and selects the matching local SVG images. It does not calculate moves, evaluate positions, or load a third-party library.
 
-- `src/data/home.ts`: introduction, updates, chess, music, projects, facts, contact values, and image paths.
-- `src/pages/index.astro`: headings, structural copy, and section layout.
-- `src/styles/global.css`: colors, typography, spacing, responsive layouts, and restrained motion.
-- `public/images/`: add photos/screenshots here, then set `src` to `/images/filename.jpg` and provide meaningful `alt` text in the content file.
+All 52 recorded positions correspond to the supplied game, including the initial board and all 51 half-moves. Captures and castling are already represented in the positions. Start, previous, next, and end controls are keyboard-accessible. Without JavaScript, the final board and game information remain visible.
 
-Empty image paths display intentional placeholders. Empty contact values display inactive labels; supply an email and full HTTPS profile URLs to activate them. Bracketed content is unfinished.
+- `data/featured-game.pgn`: exact original game and annotations, including the original White header.
+- `data/chess-game.js`: `initialPly` selects the first displayed position; 0 starts the game, 51 opens after 26. Qf7. Each position has a label, FEN, and last-move squares.
+- `chess.html`: public names, ratings, round, result, analysis link, and static fallback board.
+- `images/chess/`: twelve consistent original SVG pieces.
 
-The chess replay uses Andy's supplied PGN in `src/data/chess-game.ts`. Edit the PGN there and set `initialPly` to the half-move to show first (0 is the starting position). The board positions are validated and generated at build time using chess.js; no chess engine runs in the browser. The original PGN annotations are preserved in the data file. Unknown event/date fields are not displayed.
+Changing only the PGN text does not regenerate the recorded positions. For a different game, replace both the PGN and the corresponding FEN sequence, and update the static fallback/game labels in `chess.html`. No parser or build step is required to view the current game.
 
-## Pages and shared layout
+## Migration and validation
 
-- `/`: `src/pages/index.astro` — introduction, Lately, and short area previews.
-- `/chess`: `src/pages/chess.astro` — chess background, highlights, and board placeholder.
-- `/music`: `src/pages/music.astro` — playing, listening, and On repeat.
-- `/build`: `src/pages/build.astro` — MCC projects and SolveXchange overview.
+The former page templates became the four readable HTML documents. Shared layout/component output is repeated as ordinary HTML. Existing CSS was consolidated into `css/styles.css`; fonts and SVG assets were copied locally. The original PGN was retained, with recorded positions replacing package-based processing.
 
-All four pages use `src/layouts/SiteLayout.astro` for fonts, navigation, active-page indicators, and footer. The footer contact content is in `src/components/Contact.astro` and its values are in `src/data/home.ts`.
-
-Edit `src/data/home.ts` for homepage, chess, build, preview, and contact content, including optional `chess.stories`. The Music page has its own `src/data/music.ts`: listening selections and all Piano, Tenor Saxophone, and Art copy/photo paths live there. Its structure is `src/pages/music.astro` and its page-specific styles are `src/styles/music.css`. Photos still go in `public/images/`. `src/styles/global.css` keeps the original visual design; `src/styles/site.css` adds only page-layout, navigation, and preview-row styles.
-
-The chess viewer uses twelve original, matching SVG assets in `public/chess/`. Piece images are chosen from the validated position, including captures, castling, and promotions. The public White label is Andy Hong; the supplied PGN is unchanged.
-
-Project detail routes are not published in this version. Earlier draft data in `src/data/projects.ts`, `src/layouts/ProjectLayout.astro`, and `src/styles/project.css` remains unused for possible future work.
+Before removing the old tooling, browser tests compared the new and original styles and section dimensions at 1280, 800, 390, and 320px. Every game position was checked in the browser, forward/backward navigation and keyboard activation passed, file URLs and no-JavaScript navigation worked, and no console errors or failed requests appeared.

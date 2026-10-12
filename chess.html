@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A little corner of the internet for Andy's chess, music, and things he builds."
+    />
+    <title>Chess — Andy</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="data/chess-game.js"></script>
+    <script defer src="js/chess.js"></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="container header">
+      <a class="wordmark" href="index.html" aria-label="Andy, homepage"
+        >Andy<span aria-hidden="true">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="chess.html" aria-current="page">Chess</a
+        ><a href="music.html">Music</a><a href="build.html">Things I build</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main" class="container area-page">
+      <section
+        id="chess"
+        class="section chess-section"
+        aria-labelledby="chess-title"
+      >
+        <div>
+          <p class="eyebrow">On the board</p>
+          <h1 id="chess-title">
+            A game I keep<br class="desktop-break" />
+            coming back to
+          </h1>
+          <p>
+            I&#39;ve played competitive chess for around eight years and still
+            compete nationally and internationally. Over time, chess also became
+            more than just playing tournaments — I&#39;ve volunteered in the
+            chess community, helped run events, and became a National Arbiter.
+          </p>
+          <div class="chess-note">
+            <span class="small-label">A couple of tournament highlights</span>
+            <ul>
+              <li>Top 10, North American U16 Youth Chess Championship</li>
+              <li>Top 10, Pan-American School U17 Chess Championship</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="board-figure game-replay" data-initial="51">
+          <p class="game-player">Mayorga Araya, Sofia <span>(2111)</span></p>
+          <div class="board-wrap">
+            <div
+              class="board"
+              role="img"
+              aria-label="Chess position after 26. Qf7, White at the bottom"
+            >
+              <span class="square game-square" title="a8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a8: empty. </span></span
+              ><span class="square game-square dark" title="b8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b8: empty. </span></span
+              ><span class="square game-square" title="c8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c8: empty. </span></span
+              ><span class="square game-square dark" title="d8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d8: empty. </span></span
+              ><span class="square game-square" title="e8: Black rook"
+                ><img
+                  class="game-piece"
+                  src="images/chess/br.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e8: Black rook. </span></span
+              ><span class="square game-square dark" title="f8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f8: empty. </span></span
+              ><span class="square game-square" title="g8: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g8: empty. </span></span
+              ><span class="square game-square dark" title="h8: Black king"
+                ><img
+                  class="game-piece"
+                  src="images/chess/bk.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h8: Black king. </span></span
+              ><span class="square game-square dark" title="a7: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a7: empty. </span></span
+              ><span class="square game-square" title="b7: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b7: empty. </span></span
+              ><span class="square game-square dark" title="c7: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c7: empty. </span></span
+              ><span class="square game-square" title="d7: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d7: empty. </span></span
+              ><span class="square game-square dark" title="e7: Black knight"
+                ><img
+                  class="game-piece"
+                  src="images/chess/bn.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e7: Black knight. </span></span
+              ><span
+                class="square game-square last-move"
+                title="f7: White queen"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wq.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f7: White queen. </span></span
+              ><span class="square game-square dark" title="g7: Black pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/bp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g7: Black pawn. </span></span
+              ><span class="square game-square" title="h7: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h7: empty. </span></span
+              ><span class="square game-square" title="a6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a6: empty. </span></span
+              ><span class="square game-square dark" title="b6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b6: empty. </span></span
+              ><span class="square game-square" title="c6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c6: empty. </span></span
+              ><span class="square game-square dark" title="d6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d6: empty. </span></span
+              ><span class="square game-square" title="e6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e6: empty. </span></span
+              ><span class="square game-square dark" title="f6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f6: empty. </span></span
+              ><span class="square game-square" title="g6: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g6: empty. </span></span
+              ><span class="square game-square dark" title="h6: Black rook"
+                ><img
+                  class="game-piece"
+                  src="images/chess/br.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h6: Black rook. </span></span
+              ><span class="square game-square dark" title="a5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a5: empty. </span></span
+              ><span class="square game-square" title="b5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b5: empty. </span></span
+              ><span class="square game-square dark" title="c5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c5: empty. </span></span
+              ><span class="square game-square" title="d5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d5: empty. </span></span
+              ><span class="square game-square dark" title="e5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e5: empty. </span></span
+              ><span class="square game-square" title="f5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f5: empty. </span></span
+              ><span class="square game-square dark" title="g5: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g5: empty. </span></span
+              ><span class="square game-square" title="h5: Black pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/bp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h5: Black pawn. </span></span
+              ><span class="square game-square" title="a4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a4: empty. </span></span
+              ><span class="square game-square dark" title="b4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b4: empty. </span></span
+              ><span class="square game-square" title="c4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c4: empty. </span></span
+              ><span class="square game-square dark" title="d4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d4: empty. </span></span
+              ><span class="square game-square" title="e4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e4: empty. </span></span
+              ><span class="square game-square dark" title="f4: White rook"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wr.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f4: White rook. </span></span
+              ><span class="square game-square" title="g4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g4: empty. </span></span
+              ><span class="square game-square dark" title="h4: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h4: empty. </span></span
+              ><span class="square game-square dark" title="a3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a3: empty. </span></span
+              ><span class="square game-square last-move" title="b3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b3: empty. </span></span
+              ><span class="square game-square dark" title="c3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c3: empty. </span></span
+              ><span class="square game-square" title="d3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d3: empty. </span></span
+              ><span class="square game-square dark" title="e3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e3: empty. </span></span
+              ><span class="square game-square" title="f3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f3: empty. </span></span
+              ><span class="square game-square dark" title="g3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g3: empty. </span></span
+              ><span class="square game-square" title="h3: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h3: empty. </span></span
+              ><span class="square game-square" title="a2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a2: White pawn. </span></span
+              ><span class="square game-square dark" title="b2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b2: White pawn. </span></span
+              ><span class="square game-square" title="c2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c2: White pawn. </span></span
+              ><span class="square game-square dark" title="d2: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d2: empty. </span></span
+              ><span class="square game-square" title="e2: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e2: empty. </span></span
+              ><span class="square game-square dark" title="f2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f2: White pawn. </span></span
+              ><span class="square game-square" title="g2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g2: White pawn. </span></span
+              ><span class="square game-square dark" title="h2: White pawn"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wp.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h2: White pawn. </span></span
+              ><span class="square game-square dark" title="a1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">a1: empty. </span></span
+              ><span class="square game-square" title="b1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">b1: empty. </span></span
+              ><span class="square game-square dark" title="c1: White king"
+                ><img
+                  class="game-piece"
+                  src="images/chess/wk.svg"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">c1: White king. </span></span
+              ><span class="square game-square" title="d1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">d1: empty. </span></span
+              ><span class="square game-square dark" title="e1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">e1: empty. </span></span
+              ><span class="square game-square" title="f1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">f1: empty. </span></span
+              ><span class="square game-square dark" title="g1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">g1: empty. </span></span
+              ><span class="square game-square" title="h1: empty"
+                ><img
+                  class="game-piece"
+                  hidden
+                  alt=""
+                  aria-hidden="true"
+                /><span class="sr-only">h1: empty. </span></span
+              >
+            </div>
+          </div>
+          <p class="game-player">Andy Hong <span>(1859) · White</span></p>
+          <div class="game-controls" hidden>
+            <button
+              type="button"
+              data-action="start"
+              aria-label="Starting position"
+            >
+              ⇤
+            </button>
+            <button
+              type="button"
+              data-action="previous"
+              aria-label="Previous move"
+            >
+              ←
+            </button>
+            <output aria-live="polite">26. Qf7</output>
+            <button type="button" data-action="next" aria-label="Next move">
+              →
+            </button>
+            <button type="button" data-action="end" aria-label="Final position">
+              ⇥
+            </button>
+          </div>
+          <figcaption>
+            Round 9 · 1-0 (White won)<br /><a
+              href="https://www.chess.com/analysis/collection/pan-american-school-2026-2XQ8dauWe/26khWWA2aS/analysis?move=50"
+              >View the game on Chess.com ↗</a
+            >
+          </figcaption>
+        </figure>
+      </section>
+      <section class="section" aria-labelledby="playing-style-title">
+        <h2 id="playing-style-title">How I like to play</h2>
+        <div class="chess-story">
+          <p>I usually enjoy sharp, attacking positions where one inaccurate move can turn the whole game around. At the same time, I don’t mind grinding out a positional game when the position calls for it.</p>
+          <p>My favorite opening as White is somehow still the London System—yes, I know. With Black, I’m much more at home in open Sicilian positions where things get messy quickly.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <section
+          id="contact"
+          class="contact section"
+          aria-labelledby="contact-title"
+        >
+          <div>
+            <p class="eyebrow">That's me, for now.</p>
+            <h2 id="contact-title">Say hello.</h2>
+            <p>
+              If you want to talk about chess, music, something you're building,
+              or anything interesting, feel free to reach out.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:hzihan2009@gmail.com">hzihan2009@gmail.com</a>
+            <div>
+              <a href="https://github.com/hzihan2009" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/andy-hong-b78608400/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container footer">
+        <a class="wordmark" href="index.html"
+          >Andy<span class="accent">.</span></a
+        ><a href="#top">Back to the top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

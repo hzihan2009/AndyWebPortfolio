@@ -1,4 +1,0 @@
----
-import { home } from '../data/home';
----
-      <section id="contact" class="contact section" aria-labelledby="contact-title"><div><p class="eyebrow">That's me, for now.</p><h2 id="contact-title">Say hello.</h2><p>If you want to talk about chess, music, something you're building, or anything interesting, feel free to reach out.</p></div><div class="contact-links">{home.contact.email ? <a href={`mailto:${home.contact.email}`}>{home.contact.email} <span aria-hidden="true">↗</span></a> : <span class="contact-placeholder">[email to come]</span>}<div>{home.contact.github ? <a href={home.contact.github}>GitHub ↗</a> : <span class="contact-placeholder">[GitHub]</span>}{home.contact.linkedin ? <a href={home.contact.linkedin}>LinkedIn ↗</a> : <span class="contact-placeholder">[LinkedIn]</span>}</div></div></section>
