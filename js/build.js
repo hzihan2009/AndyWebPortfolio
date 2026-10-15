@@ -24,13 +24,22 @@
     if (!screenshot) return;
     const caption = figure.querySelector('figcaption');
     caption.textContent = screenshot.label;
-    figure.querySelector('.screenshot-label').textContent = screenshot.label;
+    const placeholderLabel = figure.querySelector('.screenshot-label');
+    if (placeholderLabel) placeholderLabel.textContent = screenshot.label;
     if (screenshot.src) {
-      const image = document.createElement('img');
+      const image = figure.querySelector('img') || document.createElement('img');
       image.src = screenshot.src;
       image.alt = screenshot.alt;
       image.loading = 'lazy';
-      figure.querySelector('.photo').replaceChildren(image);
+      if (screenshot.width) image.width = screenshot.width;
+      if (screenshot.height) image.height = screenshot.height;
+      const link = figure.querySelector('.photo a') || document.createElement('a');
+      link.href = screenshot.src;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.setAttribute('aria-label', `Open ${screenshot.label} screenshot at full size (new tab)`);
+      if (image.parentElement !== link) link.replaceChildren(image);
+      if (link.parentElement !== figure.querySelector('.photo')) figure.querySelector('.photo').replaceChildren(link);
       figure.querySelector('.photo').classList.remove('is-placeholder');
     }
   });
